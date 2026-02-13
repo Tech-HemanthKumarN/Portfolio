@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+
+<body>
+
+    <!-- This is for grid effect -->
+    <div id="grid-background"></div>
+
+    <!-- This is new spotlight effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Navbar content -->
+    <header class="sticky-nav">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link " aria-current="page" href="#home">Home</a>
+                        <a class="nav-link" href="#about-me">About Me</a>
+                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#Certificates">Certificates</a>
+                        <a class="nav-link" href="#My Works">My Works</a>
+                        <a class="nav-link" href="#Contact-me">Contact me</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- After Navbar content  -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Hemanth Kumar N</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/hemanth-kumar-n-3161902a0/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Tech-HemanthKumarN"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/chandhu_arya/?hl=en"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about-me">
+        <div class="container">
+
+            <div class="glass-container-outer">
+                <div class="row align-items-center">
+
+                    <div class="col-md-5">
+                        <div class="about-img">
+                            <img src="images/BTS-2025.jpg" alt="Hemanth Kumar N">
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="glass-content-inner btn-center">
+                            <h3>Full Stack Developer!</h3>
+                            <p>&nbsp; &nbsp; &nbsp;Hi, I'm <b style="font-size: 1.2rem;">Hemanth Kumar N</b>, a
+                                passionate Computer Science student with a strong focus on web development. I work with
+                                Python and full-stack technologies, including the MERN stack (MongoDB, Express.js,
+                                Node.js), along with HTML, CSS, JavaScript, and Bootstrap. I enjoy creating functional,
+                                user-friendly web applications. Some of my recent projects include a blog website and a
+                                vacation rental marketplace, both built using full-stack MERN technologies, without
+                                React, utilizing HTML, CSS, and Bootstrap for the front end. I love taking on new
+                                challenges and aim to contribute to impactful, innovative web projects. Outside of
+                                coding, I enjoy exploring new tech trends and experimenting with creative designs.</p>
+                            <div class="btn-box">
+                                <a href="#" class="inner-btn-box">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="skills py-5" id="skills">
+        <div class="container">
+            <h2 class="heading text-center mb-5">Technical <span>Prodigy</span></h2>
+
+            <div id="skills-grid" class="row g-4 justify-content-center mb-5"></div>
+
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="skill-img-card glass-container-outer">
+                        <div class="skill-img-wrapper">
+                            <img src="./images/skill-sec-img.jpg" alt="Tech" class="img-fluid rounded">
+                            <div class="skill-overlay-text">As a passionate learner, I am driven to explore new
+                                concepts, solve real-world challenges, and continuously evolve my skills to make a
+                                meaningful impact.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 d-flex flex-column gap-4">
+                    <div class="stack-card glass-container-outer p-4">
+                        <h4 class="stack-title">I continuously work on expanding and refining. <span>My Tech
+                                Stack</span></h4>
+                        <div class="skill-tags mt-3">
+                            <span class="tag">MongoDB</span><span class="tag">Express</span>
+                            <span class="tag">React</span><span class="tag">Node.js</span>
+                            <span class="tag">JavaScript</span>
+
+
+                        </div>
+                    </div>
+                    <div class="stack-card glass-container-outer p-4">
+                        <h4 class="stack-title"> I strive to cultivate and elevate my professional skills to excel in
+                            every opportunity. <span>Skills</span></h4>
+                        <div class="skill-tags mt-3">
+                            <span class="tag prof">Communication</span><span class="tag prof">Teamwork</span>
+                            <span class="tag prof"> Problem-Solving</span>
+                            <span class="tag prof">Time Management</span>
+                            <span class="tag prof">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certificates" id="Certificates">
+        <div class="container">
+            <h2 class="section-title">Academic & Professional <span>Certifications</span></h2>
+
+            <div class="row g-4" id="certificate-grid">
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <h2 class="heading">My <span>Achievements</span></h2>
+            <div id="achievement-grid" class="row g-6">
+            </div>
+        </div>
+    </section>
+
+    <section class="works py-5" id="My Works">
+        <div class="container">
+            <h2 class="heading text-center mb-5">Featured <span>Creations</span></h2>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-card glass-container-outer" data-tilt>
+                        <div class="work-img-box">
+                            <img src="./images/vacation1.png" alt="Vacation Rental" class="img-fluid">
+                            <div class="work-overlay">
+                                <a href="https://fullstack-majorproject-10.onrender.com" target="_blank"
+                                    class="work-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-details mt-3">
+                            <span class="work-category">MERN Stack</span>
+                            <h3>Vacation Rental Marketplace</h3>
+                            <p>Vacation rental marketplace designed to connect property owners with travelers seeking
+                                short-term accomodations. This platform allow the host to easily create listings with
+                                location and photos, while guests can browse, book, and leave reviews. It also have user
+                                login authentication system to make everything secure and easy to manage for both hosts
+                                and guests. The main goal is to make booking vacation rentals quick and simple. To build
+                                This project i used NodeJs and Express for backend to handle routing and server side
+                                logic. I integrated MongoDB Atlas as a Cloud database. And Passport for authentication,
+                                Cloudinary to handle and serve images efficiently.</p>
+                            <div class="work-tech-icons">
+                                <i class="bx bxl-html5"></i>
+                                <i class="bx bxl-css3"></i>
+                                <i class='bx bxl-javascript'></i>
+                                <i class='bx bxl-mongodb'></i>
+                                <i class='bx bxl-nodejs'></i>
+                                <i class='bx bxl-react'></i>
+                                <i class="bx bxl-bootstrap"></i>
+                                <img src="./images/render-community-large-icon.svg" class="custom-icon" title="Render"
+                                    alt="Render" style="height: 30px; width: 50px;">
+                                <!-- <img src="./images/express.png" class="custom-icon" title="express.js" alt="express">  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-card glass-container-outer" data-tilt>
+                        <div class="work-img-box">
+                            <img src="./images/blog.png" alt="CreativeVerse" class="img-fluid">
+                            <div class="work-overlay">
+                                <a href="https://spotify-frontendyn.onrender.com" target="_blank" class="work-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-details mt-3">
+                            <span class="work-category">Full-Stack</span>
+                            <h3>CreativeVerse Blog</h3>
+                            <p>CreativeVerse is a dynamic blog platform that leverages a robust technology stack to
+                                empower creative individuals. The backend is powered by Node.js and Express, providing a
+                                fast and scalable environment for handling requests and APIs. MongoDB serves as the
+                                database, offering a flexible solution for storing and managing content. On the front
+                                end, HTML, CSS, JavaScript, and Bootstrap create a modern, responsive design for an
+                                intuitive user experience. This seamless integration of backend and frontend
+                                technologies ensures smooth interactions, making CreativeVerse an ideal space for
+                                creators to showcase their work.</p>
+                            <div class="work-tech-icons">
+                                <i class="bx bxl-html5"></i>
+                                <i class="bx bxl-css3"></i>
+                                <i class='bx bxl-javascript'></i>
+                                <i class='bx bxl-mongodb'></i>
+                                <i class='bx bxl-nodejs'></i>
+                                <i class='bx bxl-react'></i>
+                                <i class="bx bxl-bootstrap"></i>
+                                <img src="./images/render-community-large-icon.svg" class="custom-icon" title="Render"
+                                    alt="Render" style="height: 30px; width: 50px;">
+                                <!-- <img src="./images/express.png" class="custom-icon" title="express.js" alt="express"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-4 col-md-6">
+                    <div class="project-card-container">
+                        <div class="project-card glass-container-outer">
+                            <div class="project-image">
+                                <img src="./images/vacation1.png" alt="Vacation Rental">
+                            </div>
+
+                            <div class="project-info">
+                                <span class="work-category">MERN Stack</span>
+                                <h3>Vacation Rental Marketplace</h3>
+                                <p>Secure platform for property listings and bookings with Passport.js authentication.
+                                </p>
+
+                                <div class="tech-stack-row">
+                                    <i class='bx bxl-mongodb' title="MongoDB"></i>
+                                    <i class='bx bxl-nodejs' title="Node.js"></i>
+                                    <i class='bx bxl-react' title="React"></i>
+                                    <img src="./images/render-logo.png" class="custom-icon" title="Render" alt="Render">
+                                    <img src="./images/passport-logo.png" class="custom-icon" title="Passport.js"
+                                        alt="Passport">
+                                </div>
+
+                                <a href="https://fullstack-majorproject-10.onrender.com" target="_blank"
+                                    class="visit-btn">
+                                    Visit Website <i class='bx bx-right-arrow-alt'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-card glass-container-outer" data-tilt>
+                        <div class="work-img-box">
+                            <img src="./images/motor1.png" alt="Motor Hub" class="img-fluid">
+                            <div class="work-overlay">
+                                <a href="https://spotify-frontendyn.onrender.com" target="_blank" class="work-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-details mt-3">
+                            <span class="work-category">PHP & SQL</span>
+                            <h3>Motor Service Hub</h3>
+                            <p>Motor Service Hub website that connects users with automotive service providers, making
+                                it easy for customers to book services and explore special offers. The backend is built
+                                using PHP, ensuring efficient server-side processing, while SQL provides a reliable
+                                solution for managing and storing data. For the front end, I used HTML, CSS, JavaScript,
+                                and Bootstrap to create a user-friendly, responsive interface. A user login
+                                authentication system is in place to ensure security and smooth management for both
+                                customers and service providers. This combination of technologies ensures a streamlined,
+                                intuitive experience for users seeking motor services.</p>
+                            <div class="work-tech-icons">
+                                <i class='bx bxl-html5'></i>
+                                <i class='bx bxl-css3'></i>
+                                <i class='bx bxl-javascript'></i>
+                                <!-- <i class='bx bxl-postgresql'></i> -->
+                                <img src="./images/mysql_logo_icon_169941.webp" class="custom-icon" title="Passport.js"
+                                    alt="Passport" style="width: 70px; height: 40px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cloned-websites row g-4 justify-content-center mt-5">
+            <h2 class="section-title">Few Handpicked cloned <span>static websites</span></h2>
+
+            <div class="col-lg-5">
+
+                <div class="cloned-card glass-container-outer">
+                    <div class="cloned-image">
+                        <img src="./images/spotify1.png" alt="Spotify Clone">
+                    </div>
+                    <div class="cloned-info">
+                        <span class="work-category">UI/UX Re-creation</span>
+                        <h3>Spotify Interface Clone</h3>
+                        <p>A high-fidelity static clone focusing on the complex grid layouts and player controls of the
+                            Spotify web player.</p>
+
+                        <div class="tech-stack-row">
+                            <i class='bx bxl-html5' style="color: #e34c26;"></i>
+                            <i class='bx bxl-css3' style="color: #264de4;"></i>
+                            <i class='bx bxl-javascript' style="color: #f7df1e;"></i>
+                            <img src="./images/render-community-large-icon.svg" class="custom-icon-mini" title="Render">
+                        </div>
+
+                        <a href="https://spotify-frontendyn.onrender.com" target="_blank" class="visit-btn-cloned">
+                            Visit Project <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="cloned-card glass-container-outer">
+                    <div class="cloned-image">
+                        <img src="./images/amazon1.png" alt="Amazon Clone">
+                    </div>
+                    <div class="cloned-info">
+                        <span class="work-category">Layout Design</span>
+                        <h3>Amazon Storefront Clone</h3>
+                        <p>Detailed replica of the Amazon landing page, emphasizing responsive navigation and product
+                            card components.</p>
+
+                        <div class="tech-stack-row">
+                            <i class='bx bxl-html5' style="color: #e34c26;"></i>
+                            <i class='bx bxl-css3' style="color: #264de4;"></i>
+                            <img src="./images/render-community-large-icon.svg" class="custom-icon-mini" title="Render">
+                        </div>
+
+                        <a href="https://amazon-fronted.onrender.com" target="_blank" class="visit-btn-cloned">
+                            Visit Project <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="game-display py-5">
+        <div class="container text-center">
+            <h2 class="heading mb-5"><span>Game</span> Interactive Lab</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="game-card glass-container-outer" data-tilt>
+                        <div class="game-visual-box">
+                            <img src="./images/simon-img.png" alt="Simon Game" class="game-img">
+                            <div class="game-status-tag">Status: Online</div>
+                        </div>
+
+                        <div class="game-details">
+                            <span class="work-category">JavaScript Logic</span>
+                            <h3>Simon Memory Challenge</h3>
+                            <p>A classic memory sequence game built to demonstrate DOM manipulation, event listeners,
+                                and algorithmic logic in Vanilla JavaScript.</p>
+
+                            <div class="tech-stack-row justify-content-center">
+                                <i class='bx bxl-javascript' style="color: #f7df1e;"></i>
+                                <i class='bx bxl-html5' style="color: #e34c26;"></i>
+                                <i class='bx bxl-css3' style="color: #264de4;"></i>
+                            </div>
+
+                            <a href="https://simongame-js2.onrender.com" target="_blank" class="game-launch-btn">
+                                LAUNCH SYSTEM <i class='bx bx-play-circle'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="Contact-me" class="arch-footer-wrapper">
+        <div class="container">
+            <div class="contact-card-arch glass-container-outer">
+
+                <div class="arch-center-content">
+                    <h1 class="contact-title">Contact <span>Me</span></h1>
+                    <p class="contact-subtext">
+                        I'm always open to new opportunities, collaborations, and ideas. Feel free to reach out!
+                    </p>
+                    <div class="email-btn-container">
+                        <a href="mailto:hemanthnanjappaji@gmail.com" class="arch-email-pill">
+                            hemanthnanjappaji@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="arch-bottom-row">
+                    <p class="copyright">© 2026 Hemanth Kumar N</p>
+                    <div class="social-icons-arch">
+                        <a href="https://linkedin.com/in/hemanth-kumar-n-3161902a0/" target="_blank"><i
+                                class='bx bxl-linkedin-square'></i></a>
+                        <a href="https://github.com/Tech-HemanthKumarN" target="_blank"><i
+                                class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
