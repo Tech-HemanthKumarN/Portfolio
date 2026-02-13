@@ -1,0 +1,1147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* The "Future Tech" Palette */
+    --bg-color: #0a192f;
+    --card-bg: #112240;
+    --text-primary: #ccd6f6;
+    --text-secondary: #8892b0;
+    --accent-color: #64ffda;
+    /* Neon Teal - The "Cool" factor */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in forwards;
+    /* background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"); */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    background-color: var(--card-bg) !important;
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    /* Adds depth shadow */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Style the Logo ("Portfolio") */
+.navbar-brand,
+.navbar-brand:focus,
+.navbar-brand:visited {
+    color: var(--accent-color) !important;
+    /* Always Neon Teal */
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/*Style the Links (Idle, Visited, and Clicked states) */
+.nav-link,
+.nav-link:visited,
+.nav-link:focus,
+.nav-link:active {
+    color: var(--text-primary) !important;
+    /* Always Light Slate (#ccd6f6) */
+    font-weight: 550;
+}
+
+/*Style the Hover State (Only change color when mouse is over it) */
+.nav-link:hover {
+    color: var(--accent-color) !important;
+    /* Glows Neon Teal */
+}
+
+/* Fix the Active Link (if you use JavaScript to highlight the current page) */
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+.navbar-brand {
+    margin-left: 3rem;
+}
+
+.navbar {
+    background-color: rgba(10, 25, 47, 0.95);
+    /* Dark Navy Transparency color (check color picker) */
+    backdrop-filter: blur(10px);
+}
+
+.navbar-nav {
+    margin-left: auto;
+    /* This pushes links to the right automatically */
+}
+
+/* --- HERO SECTION STYLING --- */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    /* Takes full screen height */
+    display: flex;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    padding: 70px 10% 0;
+    text-align: center;
+    /* Ensures text is centered like the video */
+}
+
+.home-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: -3px 0;
+    color: var(--text-primary);
+    /* Light Slate */
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+/* --- THE NEON TYPING EFFECT --- */
+span.multiple-text {
+    color: var(--accent-color);
+    /* Neon Teal */
+    font-weight: 600;
+    /* This creates the "Professional Glow" */
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+/* Social Media Buttons Styling */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--accent-color);
+    margin: 30px 15px 30px 0;
+    transition: 0.5s ease;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.social-media a:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    /* Turns dark on hover */
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* Entry Animations */
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*  FOR GRID */
+/* --- INTERACTIVE GRID BACKGROUND --- */
+#grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* Put grid slightly ABOVE the spotlight but BEHIND text */
+    z-index: -2;
+    /* IMPORTANT: Background must be transparent so we can see the spotlight behind it */
+    background: transparent;
+}
+
+/* Individual Grid Boxes */
+.grid-box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    /* Faint border to see the grid structure */
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: 1.5s ease;
+}
+
+.grid-box:hover {
+    background: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+    transition: 0s;
+    z-index: 1;
+}
+
+/* --- GLOBAL SPOTLIGHT --- */
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(100, 255, 218, 0.15) 0%, rgba(10, 25, 47, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    /* Put spotlight deepest in the background */
+    z-index: -3;
+    transition: transform 0.05s linear;
+    /* Faster transition for less lag */
+}
+
+
+/* --- ABOUT SECTION --- */
+.about {
+    background-color: var(--bg-color);
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LEVEL 1: OUTER GLASS (The Big Container) */
+.glass-container-outer {
+    /* Very transparent dark blue */
+    background: rgba(17, 34, 64, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Subtle border */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* Shadow helps lift it */
+
+    border-radius: 25px;
+    padding: 3rem 2rem;
+    /* Breathing room */
+    width: 100%;
+}
+
+/* LEVEL 2: INNER GLASS (The Text Box) */
+.glass-content-inner {
+    /* Slightly lighter/more opaque to stand out against the outer glass */
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
+    /* Double blur for depth */
+
+    /* The Inner Border & Glow */
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 15px;
+
+    padding: 2rem;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+    /* Inset shadow creates "pressed" look */
+    transition: 0.3s ease;
+}
+
+/* Hover Effect on Inner Glass */
+.glass-content-inner:hover {
+    border-color: var(--accent-color);
+    /* Highlight border on hover */
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.1);
+}
+
+/* --- IMAGE STYLING (Kept the same) --- */
+.about-img {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto 20px auto;
+    /* Margin bottom for mobile spacing */
+    transform: translateZ(50px);
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    filter: grayscale(20%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-img::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--accent-color);
+    border-radius: 15px;
+    z-index: 1;
+    transition: 0.3s ease;
+}
+
+.about-img:hover img {
+    transform: translate(-5px, -5px);
+    filter: grayscale(0%);
+}
+
+.about-img:hover::after {
+    transform: translate(5px, 5px);
+}
+
+/* --- TEXT & BUTTONS --- */
+.glass-content-inner .heading {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.glass-content-inner p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: var(--text-secondary);
+    transform: translateZ(80px);
+}
+
+/* Responsive Fix: Add space between image and text on phones */
+@media (max-width: 768px) {
+    .col-md-5 {
+        margin-bottom: 30px;
+    }
+
+    .about-img {
+        max-width: 250px;
+    }
+}
+
+/* Ensure the container hides the light when it moves out of bounds */
+.glass-content-inner {
+    position: relative;
+    /* Essential for the effect to stay inside */
+    overflow: hidden;
+    /* Cuts off the light when it goes past the edge */
+    /* ... Keep your existing glass styles here ... */
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-box {
+    height: 30px;
+    width: 100px;
+    text-decoration: none;
+    background-color: aqua;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 250px;
+    cursor: pointer;
+}
+
+.inner-btn-box {
+    text-decoration: none;
+    color: black;
+}
+
+/* THE MOVING LIGHT BEAM */
+.glass-content-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    /* Start completely off-screen to the left */
+    width: 100%;
+    height: 100%;
+
+    /* This creates the beam of light: Transparent -> Shine -> Transparent */
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            /* The Shine Color (White/Teal) */
+            transparent);
+
+    /* Slant the beam for a cool sci-fi look */
+    transform: skewX(-25deg);
+
+    /* Run the animation */
+    animation: holographicShine 4s infinite;
+    /* 4s = Speed of the light */
+}
+
+/* The Animation Logic */
+@keyframes holographicShine {
+    0% {
+        left: -150%;
+        /* Start Left */
+    }
+
+    50% {
+        left: 150%;
+        /* Move all the way to Right */
+    }
+
+    100% {
+        left: 150%;
+        /* Pause for a moment before restarting */
+    }
+}
+
+/* LEVEL 1: OUTER GLASS (The Big Container) */
+.glass-container-outer {
+    position: relative;
+    /* --- THE DYNAMIC SPOTLIGHT BACKGROUND --- */
+    /* 1. The spotlight: A radial gradient centered at var(--x) var(--y)
+       2. The base color: Your dark transparent navy 
+    */
+    background: radial-gradient(600px circle at var(--x) var(--y),
+            rgba(100, 255, 218, 0.15),
+            /* The Center (Neon Teal Glow) */
+            rgba(17, 34, 64, 0.4) 40%
+            /* The Fade Out (Dark Navy) */
+        );
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Subtle border */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    border-radius: 25px;
+    padding: 3rem 2rem;
+    width: 100%;
+
+    /* 3D Properties for the Tilt */
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+/* --- SKILLS SECTION  --- */
+.skills .heading {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 50px;
+}
+
+.skills .heading span {
+    color: var(--accent-color);
+}
+
+.skill-card i {
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover i {
+    transform: scale(1.1) translateY(-5px);
+    text-shadow: 0 0 15px var(--accent-color);
+}
+
+.skill-card h4 {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.skill-status {
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.skills {
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Image Card Styling */
+.skill-img-card {
+    height: 100%;
+    padding: 1.5rem !important;
+    overflow: hidden;
+}
+
+.skill-img-wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.skill-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+    transition: 0.5s ease;
+}
+
+.skill-overlay-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Stack Cards Logic */
+/* The Skill Card - Professional Glassmorphism */
+.skill-card {
+    background: rgba(17, 34, 64, 0.6);
+    /* Slightly darker for contrast */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+    position: relative;
+    z-index: 5;
+    /* Ensures it sits above your background grid */
+}
+
+.stack-title {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.stack-title span {
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Skill Tags (The Purple Box look from your image) */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: rgba(100, 255, 218, 0.1);
+    /* Neon Teal Background */
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.tag.prof {
+    border-color: #875cd0;
+    /* Purple accent for professional skills */
+    color: #bfa3ef;
+    background: rgba(135, 92, 208, 0.1);
+}
+
+.tag:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.certificates {
+    padding: 100px 0;
+    background: transparent;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.section-title span {
+    color: #00eeff;
+    /* Or your specific accent color */
+}
+
+/* The Card Styling */
+.cert-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+/* Container for the Achievement/Certificate */
+.cert-card {
+    background: rgba(17, 34, 64, 0.7);
+    /* Darker base for better text contrast */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 20px;
+    padding: 24px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* THE NEON BORDER BOX around the image */
+.cert-img-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+    /* Solid back for the certificate */
+    padding: 15px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+    /* Neon Glow */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Making the certificate large and visible */
+.cert-img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
+    /* Shows full certificate without cropping */
+    filter: brightness(1.1) contrast(1.1);
+    /* Makes the paper look whiter/cleaner */
+}
+
+/* Typography for better visibility */
+.cert-org {
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.cert-details h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.achievement-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.cert-hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cert-card:hover .cert-hover-overlay {
+    opacity: 1;
+}
+
+.cert-card:hover .cert-img {
+    transform: scale(1.1);
+}
+
+.cert-btn {
+    padding: 10px 20px;
+    border: 2px solid #00eeff;
+    background: transparent;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cert-btn:hover {
+    background: #00eeff;
+    color: #000;
+}
+
+.cert-details {
+    margin-top: 20px;
+}
+
+/* .cert-org {
+    font-size: 0.8rem;
+    color: #00eeff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+} */
+
+/* .cert-details h3 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #fff;
+} */
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.heading span {
+    color: #00eeff;
+}
+
+/* --- WORK SECTION STYLING --- */
+.work-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px !important;
+    transition: all 0.4s ease;
+}
+
+.work-img-box {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+}
+
+.work-img-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* Ensures image fits properly without stretching */
+    transition: transform 0.5s ease;
+}
+
+.work-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.85);
+    /* Deep Navy Overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.work-card:hover .work-overlay {
+    opacity: 1;
+}
+
+.work-card:hover .work-img-box img {
+    transform: scale(1.1);
+}
+
+.work-link {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+.work-category {
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.work-details h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.work-details p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.work-tech-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+/* Container for Cloned Section */
+.cloned-websites {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.cloned-card {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 0 !important; /* Image should touch edges */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* The Cover Image */
+.cloned-image {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.cloned-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The Reveal Content */
+.cloned-info {
+    position: absolute;
+    inset: 0;
+    padding: 2.5rem;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+/* HOVER EFFECT: Slide Image UP and Fade Details IN */
+.cloned-card:hover .cloned-image {
+    transform: translateY(-100%);
+}
+
+.cloned-card:hover .cloned-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typography & Tech Icons */
+.cloned-info h3 {
+    color: var(--accent-color);
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.cloned-info p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.custom-icon-mini {
+    height: 20px;
+    width: auto;
+    filter: brightness(1.5);
+}
+
+/* Pro Visit Button */
+.visit-btn-cloned {
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    width: fit-content;
+    transition: 0.3s ease;
+}
+
+.visit-btn-cloned:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+}
+
+/* Game Card Specific Styling */
+.game-card {
+    position: relative;
+    padding: 30px !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.game-visual-box {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.game-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.game-status-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(100, 255, 218, 0.8);
+    color: #0a192f;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Hover Effects */
+.game-card:hover {
+    border-color: var(--accent-color);
+}
+
+.game-card:hover .game-img {
+    transform: scale(1.1);
+}
+
+/* Button Styling */
+.game-launch-btn {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent-color);
+    color: #0a192f;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.game-launch-btn:hover {
+    background: transparent;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+}
+
+.game-launch-btn i {
+    font-size: 1.4rem;
+}
+/* Footer Wrapper - ensures the grid background stays visible */
+.arch-footer-wrapper {
+    background: transparent;
+    padding-top: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+/* The Arch - Using your existing glass-container-outer logic */
+.contact-card-arch {
+    background: rgba(17, 34, 64, 0.6) !important; /* Matches your project cards */
+    border-radius: 120px 120px 0 0 !important; /* The Arch shape */
+    padding: 80px 40px 30px !important;
+    border: 1px solid rgba(100, 255, 218, 0.2) !important; /* Teal border */
+    border-bottom: none !important;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 420px;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-title span {
+    color: var(--accent-color); /* Neon Teal "Me" */
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+.contact-subtext {
+    color: var(--text-secondary); /* Dimmer blue-grey text */
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+}
+
+/* Email Pill - Now matching your project button styles */
+.arch-email-pill {
+    background: rgba(100, 255, 218, 0.05);
+    color: var(--accent-color);
+    padding: 12px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    transition: 0.3s ease;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.arch-email-pill:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Bottom corner elements */
+.arch-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(136, 146, 176, 0.1);
+    padding-top: 25px;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Social icons with matching teal boxes */
+.social-icons-arch a {
+    color: var(--bg-color);
+    background: var(--accent-color);
+    font-size: 1.5rem;
+    padding: 6px;
+    border-radius: 6px;
+    margin-left: 15px;
+    display: inline-flex;
+    transition: 0.3s;
+}
+
+.social-icons-arch a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--accent-color);
+}
